@@ -4,8 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="656bb1ac-b98e-450f-87c3-674cfa61a88d" name="Changes" comment="Add main application logic, database management, and notification system">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="656bb1ac-b98e-450f-87c3-674cfa61a88d" name="Changes" comment="Refactor main window setup to include start and due date inputs">
       <change beforePath="$PROJECT_DIR$/UI/mainWindow.py" beforeDir="false" afterPath="$PROJECT_DIR$/UI/mainWindow.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -84,7 +83,7 @@
       <option name="presentableId" value="Default" />
       <updated>1754383712747</updated>
       <workItem from="1754383713874" duration="13968000" />
-      <workItem from="1754415198870" duration="1282000" />
+      <workItem from="1754415198870" duration="1615000" />
     </task>
     <task id="LOCAL-00001" summary="Initial project structure">
       <option name="closed" value="true" />
@@ -118,7 +117,15 @@
       <option name="project" value="LOCAL" />
       <updated>1754415576570</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Refactor main window setup to include start and due date inputs">
+      <option name="closed" value="true" />
+      <created>1754416574794</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1754416574794</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -128,10 +135,11 @@
     <MESSAGE value="Initial project structure" />
     <MESSAGE value="Add main application logic and initial main window setup" />
     <MESSAGE value="Add main application logic, database management, and notification system" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add main application logic, database management, and notification system" />
+    <MESSAGE value="Refactor main window setup to include start and due date inputs" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactor main window setup to include start and due date inputs" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/ToDoAppPro$main.coverage" NAME="main Coverage Results" MODIFIED="1754408375220" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/ToDoAppPro$main.coverage" NAME="main Coverage Results" MODIFIED="1754416835583" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/ToDoAppPro$mainWindow.coverage" NAME="mainWindow Coverage Results" MODIFIED="1754398116460" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/UI" />
   </component>
 </project>

@@ -16,25 +16,6 @@ class MainWindow(QMainWindow):
         self.db = DBManager()
         self.tasks = []
 
-        # Timer to check notification
-        self.notificationTimer = QTimer()
-        self.notificationTimer.timeout.connect(self.checkTasknotifications)
-        self.notificationTimer.start(60000) # Check every minute
-
-        # Field for start date
-        self.startDateInput = QDateTimeEdit()
-        self.startDateInput.setDisplayFormat("yyyy-MM-dd HH:mm")
-        self.startDateInput.setDateTime(datetime.now())
-        # Adiciona ao layout principal
-        mainLayout = QVBoxLayout()
-        mainLayout.addWidget(self.startDateInput)
-
-        # Field for due date
-        self.dueDateInput = QDateTimeEdit()
-        self.dueDateInput.setDisplayFormat("yyyy-MM-dd HH:mm")
-        self.dueDateInput.setDateTime(datetime.now())
-        mainLayout.addWidget(self.dueDateInput)
-
         # Show notification of tasks
         showNotification("Tasks Alert", "Your tasks are almost out of schedule")
 
@@ -53,6 +34,25 @@ class MainWindow(QMainWindow):
         # Task list
         self.taskList = QListWidget()
         mainLayout.addWidget(self.taskList)
+
+        # Timer to check notification
+        self.notificationTimer = QTimer()
+        self.notificationTimer.timeout.connect(self.checkTasknotifications)
+        self.notificationTimer.start(60000)  # Check every minute
+
+        # Field for start date
+        self.startDateInput = QDateTimeEdit()
+        self.startDateInput.setDisplayFormat("yyyy-MM-dd HH:mm")
+        self.startDateInput.setDateTime(datetime.now())
+        # Adiciona ao layout principal
+        mainLayout = QVBoxLayout()
+        mainLayout.addWidget(self.startDateInput)
+
+        # Field for due date
+        self.dueDateInput = QDateTimeEdit()
+        self.dueDateInput.setDisplayFormat("yyyy-MM-dd HH:mm")
+        self.dueDateInput.setDateTime(datetime.now())
+        mainLayout.addWidget(self.dueDateInput)
 
         # Input field
         self.taskInput = QLineEdit()
