@@ -1,10 +1,9 @@
 from PyQt6.QtWidgets import QMainWindow, QLabel, QWidget, QVBoxLayout, QHBoxLayout, QPushButton, QListWidget, QLineEdit, \
-    QMessageBox
+    QMessageBox, QDateTimeEdit
 from database.dbManager import DBManager
 from models.task import Task
 from notifications.notifier import showNotification
 from PyQt6.QtCore import QTimer
-from PyQt6.QtCore import QTimerEdit
 from datetime import datetime, timedelta
 from plyer import notification
 
@@ -23,7 +22,18 @@ class MainWindow(QMainWindow):
         self.notificationTimer.start(60000) # Check every minute
 
         # Field for start date
-        self.start
+        self.startDateInput = QDateTimeEdit()
+        self.startDateInput.setDisplayFormat("yyyy-MM-dd HH:mm")
+        self.startDateInput.setDateTime(datetime.now())
+        # Adiciona ao layout principal
+        mainLayout = QVBoxLayout()
+        mainLayout.addWidget(self.startDateInput)
+
+        # Field for due date
+        self.dueDateInput = QDateTimeEdit()
+        self.dueDateInput.setDisplayFormat("yyyy-MM-dd HH:mm")
+        self.dueDateInput.setDateTime(datetime.now())
+        mainLayout.addWidget(self.dueDateInput)
 
         # Show notification of tasks
         showNotification("Tasks Alert", "Your tasks are almost out of schedule")
@@ -104,10 +114,9 @@ class MainWindow(QMainWindow):
             self.tasks.append(task)
             self.taskList.addItem(str(task))
 
-    def checkTasknotifications(tasks):
+    def checkTasknotifications(self):
         now = datetime.now()
-
-        for task in tasks:
+        for task in self.tasks:
             if task.startDate:
                 start = datetime.strptime(task.startDate, "%Y-%m-%d %H:%M")
 
@@ -124,4 +133,3 @@ class MainWindow(QMainWindow):
                         title = "Task ending soon"
                         message = (f"Task is ending soon")
                         timeout = 10
-
